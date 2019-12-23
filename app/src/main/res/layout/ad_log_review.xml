@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:orientation="vertical"
+                xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="70dp">
 
     <TextView
             android:text="TextView"
             android:layout_width="match_parent"
             android:layout_height="50dp" android:id="@+id/logtit" android:gravity="center_vertical"
-            android:textSize="16sp" android:textColor="@android:color/black" android:padding="5dp"/>
+            android:textSize="16sp" android:textColor="@android:color/black" android:padding="5dp"
+            android:layout_centerVertical="true"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/time" android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"/>
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp" app:srcCompat="@color/buttoncolor" android:id="@+id/imageView"
+            android:layout_alignParentBottom="true"/>
 </RelativeLayout>
