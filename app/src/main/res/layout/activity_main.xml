@@ -6,14 +6,57 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <Button
-            android:text="點我刷新"
+    <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:id="@+id/refresh"
-            android:background="@android:color/holo_red_dark" android:layout_below="@id/rela"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"
-            android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp"/>
+            android:layout_height="wrap_content" android:layout_below="@id/rela" android:id="@+id/lin">
+        <Button
+                android:text="點我刷新"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/refresh"
+                android:background="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"
+                android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp"
+                android:layout_weight="1" android:layout_margin="5dp"/>
+        <Button
+                android:text="清空數據"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/delete"
+                android:background="@android:color/holo_red_dark"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp" android:layout_marginEnd="10dp" android:layout_marginBottom="10dp"
+                android:textColor="@color/white" android:textStyle="bold" android:textSize="16sp"
+                android:layout_weight="1" android:layout_margin="5dp"/>
+    </LinearLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp" android:layout_below="@id/lin" android:id="@+id/dd">
+
+        <TextView
+                android:text="樣本數:0\t成功:0\t失敗:0\t成功率:0"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" android:id="@+id/tit" android:gravity="center"
+                android:textColor="@android:color/holo_red_dark" android:textSize="16sp"/>
+        <TextView
+                android:text="SP:"
+                android:layout_width="50dp"
+                android:layout_height="match_parent" android:id="@+id/textView6" android:layout_below="@id/tit"
+                android:gravity="center" android:textColor="@android:color/black" android:textSize="16sp"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText" android:layout_below="@id/tit" android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/textView6" android:layout_toStartOf="@id/serch"
+                android:layout_marginEnd="100dp"/>
+        <Button
+                android:text="查詢"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/serch" android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp" android:background="@android:color/holo_orange_dark" android:id="@+id/rela">
@@ -26,5 +69,5 @@
     </RelativeLayout>
     <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:id="@+id/re" android:layout_below="@id/refresh"/>
+            android:layout_height="match_parent" android:id="@+id/re" android:layout_below="@id/dd"/>
 </RelativeLayout>

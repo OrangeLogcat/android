@@ -13,7 +13,8 @@ class Ad_Log_Review(var beans: Beans_Log) : RootAdapter(R.layout.ad_log_review) 
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.mView.logtit.text = beans.tit[position]
+
+        holder.mView.logtit.text = beans.tit[position].replace("*","\n")
         holder.mView.time.text=beans.time[position]
         holder.mView.setOnClickListener {
             act.ChangePage(Frag_LogRead(beans.data[position]),"Frag_LogRead",true)

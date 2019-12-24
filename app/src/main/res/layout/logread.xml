@@ -14,16 +14,7 @@
                 android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_centerInParent="true"
                 android:textColor="@android:color/white" android:textSize="18sp" android:textStyle="bold"/>
     </RelativeLayout>
-    <ScrollView
+    <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_below="@id/rela">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/log" android:lineSpacingMultiplier="1.5"
-                    android:padding="10dp" android:textColor="@color/colorAccent" android:textSize="18sp"
-                    android:textStyle="bold"/>
-        </LinearLayout>
-    </ScrollView>
+            android:layout_height="match_parent" android:id="@+id/re" android:layout_below="@id/rela"/>
 </RelativeLayout>
